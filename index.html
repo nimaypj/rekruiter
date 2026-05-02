@@ -1,39 +1,106 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekruiter.ai Assistant</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #1e293b;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0f766e, #14b8a6);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 50px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
         .card {
             background: white;
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
         }
 
         .card h3 {
-            margin-top: 0;
             color: #0f766e;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .card p {
+            line-height: 1.6;
+            color: #475569;
         }
 
         .demo-section {
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
         }
 
         .demo-section h2 {
-            color: #0f766e;
+            font-size: 38px;
             margin-bottom: 15px;
+            color: #0f766e;
+        }
+
+        .demo-section p {
+            font-size: 18px;
+            color: #475569;
         }
 
         footer {
-            text-align: center;
-            padding: 20px;
-            color: #666;
             background: white;
+            text-align: center;
+            padding: 25px;
+            color: #64748b;
             margin-top: 40px;
+            border-top: 1px solid #e2e8f0;
         }
     </style>
 </head>
+
 <body>
 
     <section class="hero">
         <h1>Rekruiter.ai Assistant</h1>
+
         <p>
             AI-powered support assistant for Rekruiter.ai.
             Ask questions about job creation, AI suggestions,
@@ -42,34 +109,58 @@
     </section>
 
     <section class="features">
+
         <div class="card">
             <h3>Create Jobs</h3>
-            <p>Create jobs using JD upload or AI-generated summaries.</p>
+
+            <p>
+                Create jobs using JD uploads or AI-generated summaries.
+            </p>
         </div>
 
         <div class="card">
             <h3>AI Assistance</h3>
-            <p>Edit and improve job descriptions using AI suggestions.</p>
+
+            <p>
+                Edit and improve job descriptions using AI suggestions
+                and intelligent editing tools.
+            </p>
         </div>
 
         <div class="card">
             <h3>Validation</h3>
-            <p>Validate job descriptions against candidate profiles.</p>
+
+            <p>
+                Validate job descriptions against candidate profiles
+                and hiring requirements.
+            </p>
         </div>
+
     </section>
 
     <section class="demo-section">
+
         <h2>Try the Assistant</h2>
-        <p>Use the chatbot widget in the bottom-right corner.</p>
+
+        <p>
+            Use the AI assistant in the bottom-right corner
+            to explore Rekruiter.ai features.
+        </p>
+
     </section>
 
     <footer>
         Rekruiter.ai Demo Assistant
     </footer>
 
-    <!-- ELEVENLABS CONVERSATIONAL AI WIDGET -->
-<elevenlabs-convai agent-id="agent_8201kqcrd1rafehaergab0fxm379"></elevenlabs-convai>
-<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+    <!-- ELEVENLABS CONVAI WIDGET -->
+    <elevenlabs-convai agent-id="agent_8201kqcrd1rafehaergab0fxm379"></elevenlabs-convai>
+
+    <script
+        src="https://unpkg.com/@elevenlabs/convai-widget-embed"
+        async
+        type="text/javascript">
+    </script>
 
 </body>
 </html>
